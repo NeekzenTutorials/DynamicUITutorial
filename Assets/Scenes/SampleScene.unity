@@ -2309,7 +2309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiElements:
   - element: {fileID: 1775180784}
-    horizontalPosition: 44.3
+    horizontalPosition: 44
     verticalPosition: 45
     widthPercentage: 10
     heightPercentage: 5
@@ -2398,7 +2398,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 850.56, y: 486}
+  m_AnchoredPosition: {x: 844.8, y: 486}
   m_SizeDelta: {x: 192, y: 54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1775180786
