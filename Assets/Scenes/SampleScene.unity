@@ -720,8 +720,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.76, y: 486}
-  m_SizeDelta: {x: 153.6, y: 32.4}
+  m_AnchoredPosition: {x: 76.8, y: 486}
+  m_SizeDelta: {x: 192, y: 32.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &905907881
 MonoBehaviour:
@@ -853,8 +853,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -190.07999, y: 486}
-  m_SizeDelta: {x: 153.6, y: 32.4}
+  m_AnchoredPosition: {x: -134.4, y: 486}
+  m_SizeDelta: {x: 192, y: 32.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &944121150
 MonoBehaviour:
@@ -1555,8 +1555,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -385.92, y: 486}
-  m_SizeDelta: {x: 153.6, y: 32.4}
+  m_AnchoredPosition: {x: -345.6, y: 486}
+  m_SizeDelta: {x: 192, y: 32.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1404080530
 MonoBehaviour:
@@ -1689,7 +1689,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -768, y: 486}
-  m_SizeDelta: {x: 153.6, y: 32.4}
+  m_SizeDelta: {x: 192, y: 32.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1427387016
 MonoBehaviour:
@@ -2007,8 +2007,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -576, y: 486}
-  m_SizeDelta: {x: 153.6, y: 32.4}
+  m_AnchoredPosition: {x: -556.8, y: 486}
+  m_SizeDelta: {x: 192, y: 32.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1528506847
 GameObject:
@@ -2321,27 +2321,27 @@ MonoBehaviour:
   - element: {fileID: 1427387014}
     horizontalPosition: -40
     verticalPosition: 45
-    widthPercentage: 8
+    widthPercentage: 10
     heightPercentage: 3
   - element: {fileID: 1513290206}
-    horizontalPosition: -30
+    horizontalPosition: -29
     verticalPosition: 45
-    widthPercentage: 8
+    widthPercentage: 10
     heightPercentage: 3
   - element: {fileID: 1404080528}
-    horizontalPosition: -20.1
+    horizontalPosition: -18
     verticalPosition: 45
-    widthPercentage: 8
+    widthPercentage: 10
     heightPercentage: 3
   - element: {fileID: 944121148}
-    horizontalPosition: -9.9
+    horizontalPosition: -7
     verticalPosition: 45
-    widthPercentage: 8
+    widthPercentage: 10
     heightPercentage: 3
   - element: {fileID: 905907879}
-    horizontalPosition: 0.3
+    horizontalPosition: 4
     verticalPosition: 45
-    widthPercentage: 8
+    widthPercentage: 10
     heightPercentage: 3
   - element: {fileID: 1054705958}
     horizontalPosition: 0

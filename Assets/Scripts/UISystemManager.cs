@@ -14,17 +14,41 @@ public class UISystemManager : MonoBehaviour
 
     private void Awake()
     {
+        if (PlayerPrefs.HasKey("ScreenWidth") && PlayerPrefs.HasKey("ScreenHeight"))
+        {
+            int savedWidth = PlayerPrefs.GetInt("ScreenWidth");
+            int savedHeight = PlayerPrefs.GetInt("ScreenHeight");
+            Screen.SetResolution(savedWidth, savedHeight, true);
+        }
+
         screenSize = GetScreenSize();
-        initialScreenSize = screenSize;
+        initialScreenSize = new Vector2(1920, 1080); // ou utilisez la résolution sauvegardée comme initialScreenSize si nécessaire
+
         ValidateUIElements();
         InitializeCanvasScaler();
         UpdateUIElementsLayout();
     }
 
-    //private void OnValidate()
-    //{
-    //        UpdateUIElementsLayout();
-    //}
+    private void Start()
+    {
+        foreach (var uiElement in uiElements)
+        {
+            if (PlayerPrefs.HasKey(uiElement.element.name + "_FontSize"))
+            {
+                TextMeshProUGUI tmpText = uiElement.element.GetComponentInChildren<TextMeshProUGUI>();
+                if (tmpText != null)
+                {
+                    tmpText.fontSize = PlayerPrefs.GetInt(uiElement.element.name + "_FontSize");
+                }
+            }
+        }
+    }
+
+
+    private void OnValidate()
+    {
+            UpdateUIElementsLayout();
+    }
 
     private Vector2 GetScreenSize() => new Vector2(Screen.width, Screen.height);
 
@@ -166,17 +190,13 @@ public class UIElement
 
     private int CalculateNewFontSize(int originalFontSize, Vector2 screenSize, CanvasScaler canvasScaler, Vector2 initialScreenSize)
     {
-        Vector2 referenceResolution = new Vector2(1920, 1080);
-
         float widthRatio = screenSize.x / initialScreenSize.x;
         float heightRatio = screenSize.y / initialScreenSize.y;
         float scaleRatio = Mathf.Sqrt(widthRatio * heightRatio);
 
         int newFontSize = Mathf.RoundToInt(originalFontSize * scaleRatio);
 
-        // Limiter l'augmentation/diminution de la taille de la police
-        // TODO - Faire en sorte que lorsqu'on démarre le jeu, les fonts soit automatiquement calculé en fonction par rapport à la fenêtre de référence
-        float maxChangeFactor = 2.75f; // Exemple: 150%
+        float maxChangeFactor = 2.75f; // 275%
         newFontSize = Mathf.Clamp(newFontSize, Mathf.RoundToInt(originalFontSize / maxChangeFactor), Mathf.RoundToInt(originalFontSize * maxChangeFactor));
 
         return newFontSize;
